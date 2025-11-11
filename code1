@@ -8,7 +8,7 @@ from sklearn.metrics import silhouette_score
 data = load_iris()
 X = data.data
 
-kmeans = KMeans(n_clusters=4, random_state=0, n_init=100, max_iter=10)
+kmeans = KMeans(n_clusters=3, random_state=0, n_init=100, max_iter=10)
 kmeans.fit(X)
 sillueta = silhouette_score(X, kmeans.labels_)
 print(f'Silhouette: {sillueta:.3f}')
